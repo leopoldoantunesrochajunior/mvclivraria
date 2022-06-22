@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="relis.Views.frm_lista_livro"
+           
+             Title="Relação de Livros">
+    
+
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            <Color x:Key="Preto">#000000</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <RelativeLayout x:Name="rlt_container_relative_man" Margin="0">
+            <StackLayout  RelativeLayout.YConstraint="15" 
+                          RelativeLayout.HeightConstraint="100">
+                
+                <Image Source="img_fundo_listview_extra_2.bmp"  Margin="10,0" 
+                       RelativeLayout.YConstraint="15" 
+                            RelativeLayout.HeightConstraint="100"
+                       
+                            Aspect="AspectFit"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Start"
+                       
+                      />
+
+            </StackLayout>
+            <ScrollView     RelativeLayout.XConstraint="45"
+                            RelativeLayout.YConstraint="35"
+                            RelativeLayout.HeightConstraint="550">
+
+                <ListView   x:Name="lst"  
+                            RelativeLayout.XConstraint="45"
+                            RelativeLayout.YConstraint="35"
+                            RelativeLayout.WidthConstraint="350"
+                            RelativeLayout.HeightConstraint="450" RowHeight="120">
+                           
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Padding="10">
+                                    <Image Source="{Binding img_capa}" HorizontalOptions="Start" />
+                                    <StackLayout Orientation="Vertical" Padding="10,5,5,10">
+                                        <Label Text = "{Binding id_livro}" FontSize="15" FontAttributes="Bold" />
+                                        <Label Text = "{Binding nm_isbn}" FontSize="15" FontAttributes="Bold" />
+                                        <Label Text = "{Binding nm_nome}" />
+                                        <Label Text = "{Binding nm_autor}" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+
+                
+
+
+            </ScrollView>
+            
+            
+            <StackLayout  RelativeLayout.YConstraint="625" 
+                          RelativeLayout.HeightConstraint="100">
+
+               
+               
+            </StackLayout>
+
+
+            <RelativeLayout>
+              
+                
+               
+                
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </Grid>
+    
+</ContentPage>

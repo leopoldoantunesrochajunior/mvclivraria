@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "n7WB+6uURZ2FXk1BDAog/LFgjb0VCdEbEsIJcbApbrYP+SP8TtJrvKhFSnpEJ51QUneRlw3YxB70sjZRaWHpkw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Leopoldo RazorApp\\source\\repos\\relis\\relis\\relis.iOS\\relis.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Leopoldo RazorApp\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Leopoldo RazorApp\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\Leopoldo RazorApp\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}

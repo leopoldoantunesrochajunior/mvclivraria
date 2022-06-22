@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="relis.Views.frm_lista_centro_custo"
+             Title="Listagem de Despesas"
+             xmlns:local="clr-namespace:relis.ViewModels"  
+             xmlns:model="clr-namespace:relis.Models"  
+             x:Name="BrowseItemsPages">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            <Color x:Key="Preto">#000000</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <RelativeLayout x:Name="rlt_container_relative_man" Margin="0">
+            <StackLayout  RelativeLayout.YConstraint="15" 
+                          RelativeLayout.HeightConstraint="100">
+
+                <Image Source="img_fundo_listview_extra_2.bmp"  Margin="10,0" 
+                       RelativeLayout.YConstraint="15" 
+                            RelativeLayout.HeightConstraint="100"
+                       
+                            Aspect="AspectFit"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Start"
+                       
+                      />
+
+            </StackLayout>
+            <ScrollView     RelativeLayout.XConstraint="45"
+                            RelativeLayout.YConstraint="35"
+                            RelativeLayout.HeightConstraint="550">
+                <RefreshView x:DataType="local:frm_lista_centro_custo_model" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding ErroOperacao, Mode=TwoWay}">
+                <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding Registros}"
+                SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="10" x:DataType="model:tb_livro">
+                                    <Image Source="img_fundo_dia.bmp" HorizontalOptions="Start" />
+                                    <Label Text="{Binding nm_nome}" 
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" />
+                                <Label Text="{Binding nm_autor}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:frm_lista_centro_custo_model}}, Path=ItemTapped}"		
+                                CommandParameter="{Binding .}">
+                                    </TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+             </ScrollView>
+        </RelativeLayout>
+    </Grid>
+</ContentPage>

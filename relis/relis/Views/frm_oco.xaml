@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="relis.Views.frm_oco"
+           
+             Title="{Binding Title}">
+
+    <StackLayout Spacing="20" Padding="15"  >
+        <Label Text="Nome:" FontSize="Medium" />
+        <Label Text="{Binding CartaoEscolhido.Nome }" d:Text="Nome" FontSize="Small"/>
+        <Label Text="Banco:" FontSize="Medium" />
+        <Label Text="{Binding CartaoEscolhido.Apelido}" d:Text="Banco" FontSize="Small"/>
+        <ScrollView x:Name="scroll_dois" Grid.Row="2">
+            <StackLayout x:Name="stl_emb" Orientation="Vertical" Margin="0,0,10,10">
+
+                <Label FontSize="22">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Relação de Ocorrências" FontAttributes="Bold" FontSize="22" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+
+              
+
+            </StackLayout>
+
+
+        </ScrollView>
+        <ScrollView x:Name="scroll_tres" Grid.Row="3">
+            <StackLayout Spacing="20" Padding="15" Orientation="Horizontal">
+                <Label Text="Total:" FontSize="Medium" TextColor="Red" />
+                <Label x:Name="lbl_vl_total" Text="{Binding ValorTotalTela}" FontSize="Medium" TextColor="Green"/>
+             
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+
+
+</ContentPage>

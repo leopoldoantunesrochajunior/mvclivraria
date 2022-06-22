@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\IDataCentroCusto.cs" />
+    <Compile Remove="Services\MockDataCentroCusto.cs" />
+    <Compile Remove="ViewModels\BaseCentroCustoModel.cs" />
+    <Compile Remove="ViewModels\frm_lista_centro_custo_item_model.cs" />
+    <Compile Remove="ViewModels\frm_lista_centro_custo_item_novo_model.cs" />
+    <Compile Remove="ViewModels\frm_lista_centro_custo_model.cs" />
+    <Compile Remove="ViewModels\ItemDetailViewModel.cs" />
+    <Compile Remove="ViewModels\ItemsViewModel.cs" />
+    <Compile Remove="ViewModels\NewItemViewModel.cs" />
+    <Compile Remove="Views\frm_lista_centro_custo.xaml.cs" />
+    <Compile Remove="Views\frm_lista_centro_custo_item.cs" />
+    <Compile Remove="Views\frm_lista_centro_custo_item_novo.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\frm_lista_centro_custo.xaml" />
+    <EmbeddedResource Remove="Views\frm_lista_centro_custo_item.xaml" />
+    <EmbeddedResource Remove="Views\frm_lista_centro_custo_item_novo.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySqlConnector" Version="0.50.0" />
+    <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\frm_lista_livro.xaml.cs">
+      <DependentUpon>frm_lista_livro.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\frm_menu.xaml.cs">
+      <DependentUpon>frm_menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\frm_tela_livro.xaml.cs">
+      <DependentUpon>frm_tela_livro.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

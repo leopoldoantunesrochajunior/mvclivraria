@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="relis.Views.frm_tela_livro"
+             Title="Dados do Livro">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancelar" Clicked="Cancel_Clicked" />
+        <ToolbarItem Text="Salvar" Clicked="cmd_gravar_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            <Color x:Key="Preto">#000000</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <RelativeLayout x:Name="rlt_container_relative_man" Margin="0">
+
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <Label Text="Dados do Livro" FontSize="Title"/>
+                <Label Text="Informações sobre o Livro" FontSize="16" Padding="0,0,0,0"/>
+            </StackLayout>
+
+
+            <RelativeLayout Margin="0,20,0,0">
+
+                    <BoxView  Color="Black" HeightRequest="80" 
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+
+                    <Label Text="Dados" FontSize="Large" TextColor="White"  HorizontalOptions="Center" HorizontalTextAlignment="Center"
+                           
+                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"    
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=40}" />
+
+
+      
+
+                <RelativeLayout x:Name="sta_quadro_animacao" IsVisible="{Binding OutDoor}"
+                            HorizontalOptions="Center"
+                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=.5, Constant = -65}"     
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=330}"
+                            >
+                        <ActivityIndicator x:Name="act_processamento" IsRunning="{Binding OutDoor}" Color ="#80000000" HorizontalOptions="Center"/>
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            
+
+            
+        </RelativeLayout>
+
+
+
+    </Grid>
+</ContentPage>

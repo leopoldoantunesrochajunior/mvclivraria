@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="relis.Views.frm_lista_centro_custo_item"
+             Title="Dados da Despesa">
+
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            <Color x:Key="Preto">#000000</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <RelativeLayout x:Name="rlt_container_relative_man" Margin="0">
+
+            <Image Source="img_fundo_listview_extra_2.bmp"  Margin="10,0" 
+                       RelativeLayout.YConstraint="15" 
+                            RelativeLayout.HeightConstraint="100"
+                       
+                            Aspect="AspectFit"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Start"
+                       
+                      />
+
+
+            <StackLayout Spacing="20" Padding="15">
+                
+            </StackLayout>
+        </RelativeLayout>
+        
+        </Grid>
+
+</ContentPage>

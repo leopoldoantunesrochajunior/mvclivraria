@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "oN48O7eNsK3BxZ7JmEEZK644NpfBKHxuh4QULgP05/Dq1RTG0pSYqhAPj49fNpVfs3AzDSszOteuV0YweYTLkQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Leopoldo RazorApp\\source\\repos\\applivraria\\relis\\relis\\relis.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Leopoldo RazorApp\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Leopoldo RazorApp\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\Leopoldo RazorApp\\.nuget\\packages\\mysqlconnector\\0.50.0\\mysqlconnector.0.50.0.nupkg.sha512",
+    "C:\\Users\\Leopoldo RazorApp\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Leopoldo RazorApp\\.nuget\\packages\\plugin.permissions\\6.0.1\\plugin.permissions.6.0.1.nupkg.sha512",
+    "C:\\Users\\Leopoldo RazorApp\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\Leopoldo RazorApp\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
+    "C:\\Users\\Leopoldo RazorApp\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512",
+    "C:\\Users\\Leopoldo RazorApp\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Leopoldo RazorApp\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\Leopoldo RazorApp\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
+    "C:\\Users\\Leopoldo RazorApp\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\Leopoldo RazorApp\\.nuget\\packages\\system.threading.tasks.extensions\\4.3.0\\system.threading.tasks.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Leopoldo RazorApp\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\Leopoldo RazorApp\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
